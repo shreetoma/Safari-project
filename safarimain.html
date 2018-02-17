@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <title>cemk replica page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="bootstrap.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+   <!-- <script src="node_modules/angular/angular.min.js"></script>-->
+   
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-cookies.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="styles/safaristyle.css">
+    <script src="script/safariscript.js"></script>
+    
+<script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="node_modules/angular-metergauge/build/release/angular-metergauge.min.js"></script>
+
+</head>
+    <body>
+         <nav class="navbar navbar-inverse navbar-changed" >
+    <div class="navbar-header">
+        <div class="row">
+            <div class="col-md-1">
+        <a  ui-sref="#"><img src="images/smartlogo.png" class="img-responsive img-modified"></a></div>
+         <div class="col-md-11" ><a class="heading" ui-sref="#"><h2 style="margin-left: 30px">SAFARI- Smart Advisor For Accident Risk</h2></a></div>
+    </div>
+        </div>
+    
+</nav>
+        <div class="container-fluid" ng-controller="myAppController">
+        <p style="font-size: 18px;margin-top: 0px;">A prescriptive machine learning model to calculate the driving risk level at real-time based on demographic, geographic and driving conditions. The model is trained on NHTSA Data base of accidents.</p>
+            <div class="row" >
+                <div class="col-md-12">
+                  <img src="images/img.png" class="img-responsive img-edited">
+                
+            </div>
+                <div class="col-md-12 border-div">
+                    <h4>Driver details</h4>
+                    
+                </div>
+                <form>
+                    <div class="row"style="margin-left: 20px;">
+                        <div class="col-md-3 form-group">
+                            <label class="subheading">Choose your gender:</label>
+                            <br>
+                            <input type="radio" name="gender" >Male
+                             <input type="radio" name="gender" >Female
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <label class="subheading">Enter your Age:</label>
+                            <input type="number" name="dob" class="form-control form-modified">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <div class="col-md-12 border-div">
+                    <h4>Vehicle details</h4>
+                    
+                </div>
+                <form>
+                    <div class="row"style="margin-left: 20px;">
+                        <div class="col-md-3 form-group">
+                            <label class="subheading">Choose your vehicle type:</label>
+                            <br>
+                            <select name="veehicle" class="form-control">
+                                <option>2D Sedan</option>
+                                <option>4D Sedan</option>
+                                <option>I20</option>
+                                <option>Mini</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <label class="subheading">Provide your vehicle Age:</label>
+                            <input type="number" name="dob" class="form-control form-modified">
+                        </div>
+                    </div>
+                </form>
+                
+            </div>
+            <div class="row">
+                 <div class="col-md-12 border-div">
+                    <h4>Driving Conditions</h4>
+                    
+                </div>
+                <div class="col-md-3">
+                            <label class="subheading">Choose your location:</label>
+                            <br>
+                </div>
+                   <div class="col-md-3"></div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <meter-gauge gaugeconfig="classic" ></meter-gauge>
+
+                    </div>
+            
+        </div>
+        </div>
+    </body>
+</html>
