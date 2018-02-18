@@ -1,14 +1,14 @@
 var app=angular.module('myApp', ['meterGauge']);
 app.controller('myAppController',function($scope,$interval){
     $scope.classic = {
-            gaugeRadius: 140,
+            gaugeRadius: 90,
             minVal: 0,
-            maxVal: 1000,
-            needleVal: Math.round(700),
+            maxVal: 120,
+            needleVal: $scope.speedometer,
             tickSpaceMinVal: 10,
-            tickSpaceMajVal: 100,
+            tickSpaceMajVal: 20,
             divID: "gaugeBox",
-            gaugeUnits: "Kmh",
+            gaugeUnits: "mph",
             tickColMaj:'black',
             tickColMin:'#656D78',
             outerEdgeCol:'blue',
@@ -19,7 +19,7 @@ app.controller('myAppController',function($scope,$interval){
             needleCol:'#434A54',
             defaultFonts:''
         }
- $interval(function(){
-            $scope.classic.needleVal =Math.round( Math.random()*1000)
-  },2000);
+$interval(function(){
+            $scope.classic.needleVal =$scope.speedometer
+  });
 });
